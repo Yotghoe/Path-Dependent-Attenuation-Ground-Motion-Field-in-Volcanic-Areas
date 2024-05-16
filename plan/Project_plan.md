@@ -19,16 +19,15 @@ In this project I plan to  make a ground motion field that takes into account th
 
 ## Background and Innovation  
 
-_OpenQuake is an open-source software platform developed by the Global Earthquake Model (GEM) Foundation. It provides tools for probabilistic seismic hazard assessment, exposure modeling, vulnerability assessment, and risk calculation. 
-OpenQuake does have some capabilities for merging ground motion fields, however, it can not achieve mergence considering path-dependent attenuation associated with a volcanic area.
+_Bakground: OpenQuake is an open-source software platform developed by the Global Earthquake Model (GEM) Foundation. It provides tools for probabilistic seismic hazard assessment, exposure modeling, vulnerability assessment, and risk calculation. OpenQuake does have some capabilities for merging ground motion fields, however, it can not achieve mergence considering path-dependent attenuation associated with a volcanic area. Pandas can be used to load the ground motion fields and site data into DataFrame objects for efficient data manipulation and analysis. Geopandas can be used to represent the site locations as geometric points and to identify which sites intersect with the volcanic area polygon. Shapely can be used to identify which site points intersect with the volcanic area polygon.
 
-(talk about existing packages)._
+Innovation: 1. The project accounts for the path-dependent attenuation effects. 2.It represents site locations as geometric points and define the volcanic area as a polygon , effectively identifies which sites have paths that intersect the volcanic area._
 
 ## Resources & Timeline
 
-The resources what I want to use is:
+The resources what I want to use is: Openquake.
 
-
+Timeline:
 - Step 1: Set up an environment
 - Step 2: Use OpenQuake to calculate two ground motion fields for the same source and sites, but with different GMPEs.
 - Step 3: After running the OpenQuake calculations, import the OpenQuake module into Python. (Use the appropriate OpenQuake functions to extract the two ground motion fields and site data from the OpenQuake data file.)
