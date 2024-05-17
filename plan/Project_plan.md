@@ -21,14 +21,9 @@ In this project I plan to  make a ground motion field that takes into account th
 
 _Bakground: OpenQuake is an open-source software platform developed by the Global Earthquake Model (GEM) Foundation. It provides tools for probabilistic seismic hazard assessment, exposure modeling, vulnerability assessment, and risk calculation. OpenQuake does have some capabilities for merging ground motion fields, however, it can not achieve mergence considering path-dependent attenuation associated with a volcanic area. Pandas can be used to load the ground motion fields and site data into DataFrame objects for efficient data manipulation and analysis. Geopandas can be used to represent the site locations as geometric points and to identify which sites intersect with the volcanic area polygon. Shapely can be used to identify which site points intersect with the volcanic area polygon.
 
-# Ground Motion Models (Prediction Equations, GMPEs)
+Ground Motion Models (Prediction Equations, GMPEs)
 
 $$ln y = c_1 + c_2m + c_3m^{c_4} + c_5 ln r + f(F) + f(HW) + f(S)$$
-
-1. $\underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}$
-2. $\underline{\quad\quad\quad\quad\quad\quad\quad\quad}$
-3. $\underline{\quad\quad\quad\quad\quad}$
-4. $\underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}$
 
 y: Expected ground motion intensity (PGA, SA)  
 m: Magnitude  
