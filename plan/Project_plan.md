@@ -19,7 +19,7 @@ In this project I plan to  make a ground motion field that takes into account th
 
 ## Background and Innovation  
 
-_Bakground: OpenQuake is an open-source software platform developed by the Global Earthquake Model (GEM) Foundation. It provides tools for probabilistic seismic hazard assessment, exposure modeling, vulnerability assessment, and risk calculation. OpenQuake does have some capabilities for merging ground motion fields, however, it can not achieve mergence considering path-dependent attenuation associated with a volcanic area. Pandas can be used to load the ground motion fields and site data into DataFrame objects for efficient data manipulation and analysis. Geopandas can be used to represent the site locations as geometric points and to identify which sites intersect with the volcanic area polygon. Shapely can be used to identify which site points intersect with the volcanic area polygon.
+Bakground: OpenQuake is an open-source software platform developed by the Global Earthquake Model (GEM) Foundation. It provides tools for probabilistic seismic hazard assessment, exposure modeling, vulnerability assessment, and risk calculation. OpenQuake does have some capabilities for merging ground motion fields, however, it can not achieve mergence considering path-dependent attenuation associated with a volcanic area. Pandas can be used to load the ground motion fields and site data into DataFrame objects for efficient data manipulation and analysis. Geopandas can be used to represent the site locations as geometric points and to identify which sites intersect with the volcanic area polygon. Shapely can be used to identify which site points intersect with the volcanic area polygon.
 
 Ground Motion Models (Prediction Equations, GMPEs)
 
@@ -32,7 +32,7 @@ F: Fault mechanism
 HW: Site location, with respect to the fault plane  
 S: Local site conditions
 
-Innovation: 1. The project accounts for the path-dependent attenuation effects. 2.It represents site locations as geometric points and define the volcanic area as a polygon , effectively identifies which sites have paths that intersect the volcanic area._
+Innovation: 1. The project accounts for the path-dependent attenuation effects. 2.It represents site locations as geometric points and define the volcanic area as a polygon , effectively identifies which sites have paths that intersect the volcanic area.
 
 ## Resources & Timeline
 
