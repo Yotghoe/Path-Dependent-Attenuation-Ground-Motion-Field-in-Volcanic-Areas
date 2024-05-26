@@ -50,4 +50,5 @@ jupyter-lab
 
 ### Future Improvements	
 
-- Install and import package h5py, since
+- Install and import package h5py, since h5py is also widely used as GMF data file format.
+- 
