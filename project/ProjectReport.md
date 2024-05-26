@@ -50,5 +50,6 @@ jupyter-lab
 
 ### Future Improvements	
 
-- Install and import package h5py, since h5py is also widely used as GMF data file format.
-- 
+- Install and import package h5py, make the code availabale for h5py files.
+- Combine multiple GMFs depending on how long their path form source to site intersects the volcanic areas.
+- Gather information (e.g. satallite imagery) to draw better volcanic areas.
