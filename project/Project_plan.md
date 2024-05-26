@@ -37,7 +37,7 @@ Timeline:
 ## Testing, validation, documentation
 
 Testing: Each steps will be tested by `print()` and `assert` to see if the code is working and Test whether the files used exist and contain the required information.  
-  A test example: 
+  A test example:   
    `def clean_site_coords(file_path):
     data = pd.read_csv(file_path, skiprows=1)
     data.columns = ['site_id', 'Longitude', 'Latitude']
@@ -48,7 +48,7 @@ Testing: Each steps will be tested by `print()` and `assert` to see if the code 
     assert 'site_id' in data.columns, "site_id column should exist."
     assert 'Longitude' in data.columns, "Longitude column should exist."
     assert 'Latitude' in data.columns, "Latitude column should exist."
-    print("Site coordinates data cleaned:")
+    print("Site coordinates data cleaned")
     retrun data`
 
 
