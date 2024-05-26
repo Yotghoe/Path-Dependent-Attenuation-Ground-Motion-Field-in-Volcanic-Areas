@@ -28,7 +28,7 @@ The resources what I want to use is: Openquake.
 
 Timeline:
 - Step 1: Set up an environment
-- Step 2: Use OpenQuake to calculate two ground motion fields for the same source and sites, but with different GMPEs.
+- Step 2: Use OpenQuake to calculate two ground motion fields for the same source and sites, but with different GMPEs. (Not directly included in this project)
 - Step 3: After running the OpenQuake calculations, read and process the OpenQuake data in Python.
 - Step 4: Use pandas/geopandas to efficiently merge the two ground motion fields based on whether the path to each site crosses the polygon delimiting the volcanic area.
 - Step 5: Analyze and visualize the result ground motion field.
