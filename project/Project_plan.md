@@ -1,6 +1,6 @@
 # EMSC4033 project plan
 
-## Modeling Path-Dependent Ground Motion in volcanic region
+## Path-Dependent Attenuation Ground Motion Field in Volcanic Areas
 
 ## Executive summary
 _Volcanic areas can have complex geological structures that affect the propagation of seismic waves, typically manifested in Path-Dependent Attenuation, the reduction of seismic waves as they propagate from the earthquake source to the sites of interest.
