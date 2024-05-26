@@ -13,9 +13,14 @@ cd /.../directory #Can be replaced by any location you want
 #Clone the repository
 git clone https://github.com/Yotghoe/Path-Dependent-Attenuation-Ground-Motion-Field-in-Volcanic-Areas.git new_directory_name
 ```
-
-
-- __
+- __Create and activate the environment__
+```
+conda env create -f environment.yml
+conda activate myproject
+#Open Jupyter lab
+jupyter-lab
+```
+- 
 
 
 Add here instructions for what the user need to do to use your code. List any dependencies and/or input files that might be needed or include instructrions for how the user can use, e.g., a custom conda environment that you may have included with your code.
