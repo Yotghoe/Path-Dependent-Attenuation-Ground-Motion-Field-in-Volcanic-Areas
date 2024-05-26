@@ -15,22 +15,10 @@ In this project I plan to  make a ground motion field that takes into account th
 
 - Goal 3: Visualise the original ground motion fields and combined ground motion field with volcanic regions and earthquake source.
 
-- ...
 
 ## Background and Innovation  
 
-Bakground: OpenQuake is an open-source software platform developed by the Global Earthquake Model (GEM) Foundation. It provides tools for probabilistic seismic hazard assessment, exposure modeling, vulnerability assessment, and risk calculation. Although this engine does have some capabilities for merging ground motion fields, however, it can not achieve mergence considering path-dependent attenuation associated with a volcanic area. Pandas can be used to load the ground motion fields and site data into DataFrame objects for efficient data manipulation and analysis. Geopandas can be used to represent the site locations as geometric points and to identify which sites intersect with the volcanic area polygon. Shapely can be used to identify which site points intersect with the volcanic area polygon.
-
-Ground Motion Models (Prediction Equations, GMPEs)
-
-$$ln y = c_1 + c_2m + c_3m^{c_4} + c_5 ln r + f(F) + f(HW) + f(S)$$
-
-y: Expected ground motion intensity (PGA, SA)  
-m: Magnitude  
-r: Distance  
-F: Fault mechanism  
-HW: Site location, with respect to the fault plane  
-S: Local site conditions
+Bakground: OpenQuake is an open-source software platform developed by the Global Earthquake Model (GEM) Foundation. It provides tools for probabilistic seismic hazard assessment, exposure modeling, vulnerability assessment, and risk calculation. Although this engine does have some capabilities for merging ground motion fields, however, it can not achieve mergence considering path-dependent attenuation associated with a volcanic area. Pandas can be used to load the ground motion fields and site data into DataFrame objects for efficient data manipulation and analysis. Geopandas can be used to represent the site locations as geometric points and to identify which sites intersect with the volcanic area polygon. Shapely can be used to identify which site points intersect with the volcanic area polygon. Matplotlib can be used to ploy data, especially visualising the ground motion fields.
 
 Innovation: 1. The project accounts for the path-dependent attenuation effects. 2.It represents site locations as geometric points and define the volcanic area as a polygon , effectively identifies which sites have paths that intersect the volcanic area.
 
@@ -41,21 +29,32 @@ The resources what I want to use is: Openquake.
 Timeline:
 - Step 1: Set up an environment
 - Step 2: Use OpenQuake to calculate two ground motion fields for the same source and sites, but with different GMPEs.
-- Step 3: After running the OpenQuake calculations, import the OpenQuake module into Python. (Use the appropriate OpenQuake functions to extract the two ground motion fields and site data from the OpenQuake data file.)
+- Step 3: After running the OpenQuake calculations, read and process the OpenQuake data in Python.
 - Step 4: Use pandas/geopandas to efficiently merge the two ground motion fields based on whether the path to each site crosses the polygon delimiting the volcanic area.
 - Step 5: Analyze and visualize the result ground motion field.
 - Step 6: Test, validate and document the result. 
 
 ## Testing, validation, documentation
 
-When you look at many different projects on Github, you will see little badges that flag that the code is working, or perhaps warning that something
-has stopped working. These are typically automatically generated - which means there needs to be a piece of code that checks whether things are working.
+Testing: Each steps will be tested by `print()` and `assert` to see if the code is working and Test whether the files used exist and contain the required information.  
+  A test example: `def clean_site_coords(file_path):
+    data = pd.read_csv(file_path, skiprows=1)
+    data.columns = ['site_id', 'Longitude', 'Latitude']
+    data['site_id'] = data['site_id'].astype(int)
+    data['Longitude'] = data['Longitude'].astype(float)
+    data['Latitude'] = data['Latitude'].astype(float)
+    assert not data.empty, "Site coordinates data should not be empty."
+    assert 'site_id' in data.columns, "site_id column should exist."
+    assert 'Longitude' in data.columns, "Longitude column should exist."
+    assert 'Latitude' in data.columns, "Latitude column should exist."
+    print("Site coordinates data cleaned:")
+    retrun data`
 
 
-**Note:** You need to think about how you will know your code is correct and achieves 
-the goals that are set out above (specific tests that can be implemented automatically using, 
-for example, the `assert` statement in python.)  It can be really helpful if those tests are also 
-part of the documentation so that when you tell people how to do something with the code, 
-the example you give is specifically targetted by some test code.
+Vaildation: The original ground motion fields, and the combined ground motion field with important elements (e.g. volcanic polygon) will be visualised, to see if the result is produced in the required manner。
 
-_Provide some specific tests with values that you can imagine `assert`ing_
+
+Documentation:  
+1.Detailed instructions will be provided.  
+2.Code in this project will include comments within the code to explain complex logic or important steps.  
+3.Expected results will be shown in notebooks.
