@@ -42,7 +42,9 @@ jupyter-lab
 
 ### Limitations
 
-- It won't work with h5py files because of h5py package is not included in this environment/project.
+- It will not work with h5py files because of h5py package is not included in this environment/project.
+- It is only applicable to the fusion of one high attenuation GMF and one low attenuation GMF, and is not suitable for the fusion of additional GMFs.
+- The volcanic areas ploygons(buffers) are rough.
 
 
 
