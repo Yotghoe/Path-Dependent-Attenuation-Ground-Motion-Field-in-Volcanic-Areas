@@ -6,7 +6,7 @@
 ### Instructions
 
 - __Data source.__ The information of any earthquake can be found on USGS website: https://earthquake.usgs.gov/earthquakes/search. The volcanic position shape file can be found at this link: https://github.com/Yotghoe/Path-Dependent-Attenuation-Ground-Motion-Field-in-Volcanic-Areas/tree/main/notebook/assets
-- ~~OpenQuake calculation (~~__This step can be ignored in this project since the data are provided, required data can be found at this link: https://github.com/Yotghoe/Path-Dependent-Attenuation-Ground-Motion-Field-in-Volcanic-Areas/tree/main/notebook/assets__~~). This project requires ground motion fields data produced by OpenQuake engine, the engine should be installed (Details at https://docs.openquake.org/oq-engine/master/manual/getting-started/installation-instructions/index.html#installing-the-long-term-support-lts-version) and calculation should be run (Tutorial at https://youtu.be/nbYBBT8r3N0).~~  
+- ~~OpenQuake calculation~~ (__This step can be ignored in this project since the data are provided, required data can be found at this link: https://github.com/Yotghoe/Path-Dependent-Attenuation-Ground-Motion-Field-in-Volcanic-Areas/tree/main/notebook/assets__). ~~This project requires ground motion fields data produced by OpenQuake engine, the engine should be installed (Details at https://docs.openquake.org/oq-engine/master/manual/getting-started/installation-instructions/index.html#installing-the-long-term-support-lts-version) and calculation should be run (Tutorial at https://youtu.be/nbYBBT8r3N0).~~  
 ```
 #Open the terminal or command prompt on your computer.  
 cd /.../directory #Can be replaced by any location you want
@@ -20,36 +20,29 @@ conda activate myproject
 #Open Jupyter lab
 jupyter-lab
 ```
-- 
+- __Open notebook.__ Open'notebook/notebook.ipynb', Run the code.
 
-
-Add here instructions for what the user need to do to use your code. List any dependencies and/or input files that might be needed or include instructrions for how the user can use, e.g., a custom conda environment that you may have included with your code.
 
 ### List of dependencies + short description
 
-(for example)
 
-- **numpy**: a package to create and manipulate n-dimensional arrays
-- **package_blah_blah*: ...
-
-Ideally there will be something like an environment.yml file (conda) or a requirements.txt (pip) in the repository
-
-You should also discuss why you need specific dependencies and we would always take a minimslist view: only add what you need.
-
-
+- **pandas**: Data manipulation and analysis library for handling tabular data. In this project, it is used to read, clean, and merge site coordinates and GMF data.
+- **geopandas**: Extension of pandas for geospatial data manipulation. In this project, it is used to read and manipulate shapefiles, create and analyse geospatial data, and handle coordinate transformations.
+- **shapely**: Library for creating and manipulating geometric shapes. In this project, it is used to create geometric objects like points and line strings, and perform spatial operations such as buffering.
+- **matplotlib**: Library for creating visualizations and plots. In this project, it is used to visualise the original and combined ground motion field data.
+- **jupyterlab**: Interactive development environment for notebooks, code, and data. JupyterLab can easily create an independent environment.
+- **notebook**: Web-based interactive environment for creating Jupyter notebooks. Jupyter notebook can save the unfinished code easily, terminal can not.
 
 
 ### Testing
 
-Give a short description of the tests and input validations you have included in your code.
-
-Remember: tests are checks to see that you have not added bugs to your code since it was last run whereas validation means that you check the input data to make sure it is consistent with the expectations. Generally you need both.
-
+- **Tests**: In each small step, there are tests in the form of `print()` and `assert`. `print()` helps verify that each step of the process is producing the expected results. `assert` checks that the data is not empty and that necessary columns are present.
+- **Validation**: The project visualised the original and combined GMF data, earthquake source, and volcanic buffers. Comparing the visuals, it is clear that the combination of oringinal ground motion fields is based on whether the path to each site crosses buffers that delimit volcanic areas. The combination performed correctly.
 
 
 ### Limitations
 
-Describes the limitations of your code. E.g., it only works with netCDF files because of this package that is used cannot read anything else. Any other limitations also in what users cannot do with this code. Or other things that you feel you could have done better?
+- It won't work with h5py files because of h5py package is not included in this environment/project.
 
 
 
