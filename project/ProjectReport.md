@@ -5,8 +5,17 @@
 
 ### Instructions
 
-- __Obtain data.__ This project requires ground motion fields data produced by OpenQuake engine. The information of an earthquake can be found on USGS (https://earthquake.usgs.gov/earthquakes/search)
-- 
+- __Data source.__ The information of any earthquake can be found on USGS website: https://earthquake.usgs.gov/earthquakes/search. The volcanic position shape file can be found at this link: https://github.com/Yotghoe/Path-Dependent-Attenuation-Ground-Motion-Field-in-Volcanic-Areas/tree/main/notebook/assets
+- ~~OpenQuake calculation (~~__This step can be ignored in this project since the data are provided, required data can be found at this link: https://github.com/Yotghoe/Path-Dependent-Attenuation-Ground-Motion-Field-in-Volcanic-Areas/tree/main/notebook/assets__~~). This project requires ground motion fields data produced by OpenQuake engine, the engine should be installed (Details at https://docs.openquake.org/oq-engine/master/manual/getting-started/installation-instructions/index.html#installing-the-long-term-support-lts-version) and calculation should be run (Tutorial at https://youtu.be/nbYBBT8r3N0).~~  
+```
+#Open the terminal or command prompt on your computer.  
+cd /.../directory #Can be replaced by any location you want
+#Clone the repository
+git clone https://github.com/Yotghoe/Path-Dependent-Attenuation-Ground-Motion-Field-in-Volcanic-Areas.git new_directory_name
+```
+
+
+- __
 
 
 Add here instructions for what the user need to do to use your code. List any dependencies and/or input files that might be needed or include instructrions for how the user can use, e.g., a custom conda environment that you may have included with your code.
