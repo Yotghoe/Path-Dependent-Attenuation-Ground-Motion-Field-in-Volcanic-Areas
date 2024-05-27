@@ -11,7 +11,7 @@
 #Open the terminal or command prompt on your computer.  
 cd /.../directory #Can be replaced by any location you want
 #Clone the repository
-git clone https://github.com/Yotghoe/Path-Dependent-Attenuation-Ground-Motion-Field-in-Volcanic-Areas.git new_directory_name
+git clone https://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@github.com/Yotghoe/Path-Dependent-Attenuation-Ground-Motion-Field-in-Volcanic-Areas.git
 ```
 - __Create and activate the environment__
 ```
