@@ -15,6 +15,7 @@ git clone https://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@github.com/Yotghoe/Pa
 ```
 - __Create and activate the environment__
 ```
+cd Path-Dependent-Attenuation-Ground-Motion-Field-in-Volcanic-Areas
 conda env create -f environment.yml
 conda activate myproject
 #Open Jupyter lab
