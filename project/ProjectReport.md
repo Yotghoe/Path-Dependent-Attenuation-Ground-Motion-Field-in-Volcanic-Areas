@@ -54,3 +54,7 @@ jupyter-lab
 - Install and import package h5py, make the code available for h5py files.
 - Combine multiple GMFs depending on how long their path form source to site intersects the volcanic areas.
 - Gather information (e.g. satallite imagery) to draw better volcanic areas.
+
+
+### Discussion
+- This project has been generlised to apply to any region and any seismic event, You can achieve this by replacing the existing file paths with the paths to your new data files. However, the function calls are dispersed throughout each step, which affects work efficiency to some extent. With slight modifications, such as merging the code for all steps into a unified one and put all the function calls together, then higher automation can be achieved and calculations can be completed within seconds.
